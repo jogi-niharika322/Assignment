@@ -40,6 +40,12 @@
 <artifactId>extentreports</artifactId>
 <version>5.0.9</version>
 </dependency>
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.5</version>
+      <scope>complie</scope>
+    </dependency>
 <dependency>
 <groupId>org.seleniumhq.selenium</groupId>
 <artifactId>selenium-java</artifactId>
@@ -67,6 +73,12 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
+          <configuration>
+            <suiteXmlFiles>
+              <suiteXmlFile>testng.xml</suiteXmlFile>
+          </configurtion>
+            
+            
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
