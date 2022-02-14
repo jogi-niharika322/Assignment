@@ -90,6 +90,7 @@ public class loginClass {
 	driver.findElement(By.name("txtUsername")).sendKeys(users[0]); //username
 	driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 	driver.findElement(By.name("txtPassword")).sendKeys(users[1]); //password
+	driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 	driver.findElement(By.name("btnLogin")).click();
 	String act_title = driver.getTitle();
 	String exp_title = "GTPL Bank Manager HomePage";
