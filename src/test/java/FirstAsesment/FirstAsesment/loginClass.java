@@ -85,6 +85,7 @@ public class loginClass {
 	void login(String data)
 	{
 	String users[] = data.split(",");
+	driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);	
 	driver.get("https://demo.guru99.com/v1/");
 	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 	driver.findElement(By.name("uid")).sendKeys(users[0]); //username
