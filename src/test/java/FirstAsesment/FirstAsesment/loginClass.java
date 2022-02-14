@@ -85,11 +85,11 @@ public class loginClass {
 	void login(String data)
 	{
 	String users[] = data.split(",");
-	driver.get("https://opensource-demo.orangehrmlive.com/");
+	driver.get("https://demo.guru99.com/v1/");
 	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-	driver.findElement(By.name("txtUsername")).sendKeys(users[0]); //username
+	driver.findElement(By.name("Uid")).sendKeys(users[0]); //username
 	driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-	driver.findElement(By.name("txtPassword")).sendKeys(users[1]); //password
+	driver.findElement(By.name("password")).sendKeys(users[1]); //password
 	driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 	driver.findElement(By.name("btnLogin")).click();
 	driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
