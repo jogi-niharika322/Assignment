@@ -85,9 +85,9 @@ public class loginClass {
 	void login(String data)
 	{
 	String users[] = data.split(",");
-	driver.get("http://demo.guru99.com/v1/");
-	driver.findElement(By.name("uid")).sendKeys(users[0]); //username
-	driver.findElement(By.name("password")).sendKeys(users[1]); //password
+	driver.get("https://opensource-demo.orangehrmlive.com/");
+	driver.findElement(By.name("txtUsername")).sendKeys(users[0]); //username
+	driver.findElement(By.name("txtPassword")).sendKeys(users[1]); //password
 	driver.findElement(By.name("btnLogin")).click();
 	String act_title = driver.getTitle();
 	String exp_title = "GTPL Bank Manager HomePage";
