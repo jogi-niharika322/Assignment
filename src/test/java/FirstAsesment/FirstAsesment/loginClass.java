@@ -86,7 +86,9 @@ public class loginClass {
 	{
 	String users[] = data.split(",");
 	driver.get("https://opensource-demo.orangehrmlive.com/");
+	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 	driver.findElement(By.name("txtUsername")).sendKeys(users[0]); //username
+	driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 	driver.findElement(By.name("txtPassword")).sendKeys(users[1]); //password
 	driver.findElement(By.name("btnLogin")).click();
 	String act_title = driver.getTitle();
