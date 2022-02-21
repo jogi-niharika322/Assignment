@@ -85,15 +85,15 @@ public class loginClass {
 	void login(String data)
 	{
 	String users[] = data.split(",");
-	driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);	
+	driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);	
 	driver.get("https://demo.guru99.com/v1/");
-	driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+	driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 	driver.findElement(By.name("uid")).sendKeys(users[0]); //username
-	driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+	driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 	driver.findElement(By.name("password")).sendKeys(users[1]); //password
-	driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+	driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 	driver.findElement(By.name("btnLogin")).click();
-	driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+	driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 	String act_title = driver.getTitle();
 	String exp_title = "GTPL Bank Manager HomePage";
 	Assert.assertEquals(act_title, exp_title);
