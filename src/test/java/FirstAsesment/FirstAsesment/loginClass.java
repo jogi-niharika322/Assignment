@@ -51,7 +51,7 @@ public class loginClass {
 	}
 	else if(browser.equalsIgnoreCase("Edge")){
 	//System.setProperty("webdriver.edge.driver","C:\\Driverserver\\edgedriver_win64\\msedgedriver.exe"); //create Edge instance
-		WebDriverManager.edgedriver().driverVersion("97").setup();
+		WebDriverManager.edgedriver().driverVersion("98").setup();
 		driver = new EdgeDriver();
 	}
 	else{
